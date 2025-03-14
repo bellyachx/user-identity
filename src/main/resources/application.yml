@@ -4,9 +4,18 @@ spring:
 
   security:
     oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: ${KC_URL}
+      client:
+        registration:
+          keycloak:
+            client-id: ${KC_CLIENT_ID}
+            client-secret: ${KC_CLIENT_SECRET}
+            authorization-grant-type: authorization_code
+            scope: openid,profile,email
+            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+        provider:
+          keycloak:
+            issuer-uri: ${KC_URL}
+            user-name-attribute: preferred_username
 
 springdoc:
   api-docs:
