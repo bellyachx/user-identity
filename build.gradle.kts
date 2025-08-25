@@ -1,6 +1,6 @@
 plugins {
     `java-library`
-    id("org.springframework.boot") version "3.4.3"
+    id("org.springframework.boot") version "3.5.5"
     id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -24,11 +24,12 @@ repositories {
 }
 
 // Spring
-val springBootVersion = "3.4.3"
+
+val springBootVersion = "3.5.4"
 val springDocVersion = "2.8.9"
 
 // Jackson Databind
-val jacksonVersion = "2.18.3"
+val jacksonVersion = "2.19.2"
 
 // Mapping
 val mapstructVersion = "1.6.3"
